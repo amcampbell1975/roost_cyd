@@ -1,8 +1,8 @@
 #pragma once
 
 #include <TFT_eSPI.h>
-#include <Fonts/FreeSans12pt7b.h>
-#include <Fonts/FreeSans9pt7b.h>
+//#include <Fonts/FreeSans12pt7b.h>
+//#include <Fonts/FreeSans9pt7b.h>
 
 
 #define GFXFF 1

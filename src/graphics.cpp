@@ -8,7 +8,7 @@ void showHelloWorld() {
   tft.setTextColor(TFT_RED, TFT_BLACK);
   //tft.setTextSize(2);
   //tft.setFreeFont(&FreeSans12pt7b);
-  tft.setFreeFont(&FreeSans9pt7b.h);
+  //tft.setFreeFont(&FreeSans9pt7b.h);
   
   tft.setCursor(40, 120);        // Center-ish position
   tft.print("Hello World");
