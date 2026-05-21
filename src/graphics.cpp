@@ -1,17 +1,36 @@
 
 
 #include "graphics.h"
+#include "generated/banana.h"
+#include "generated/rgb.h"
+
 extern TFT_eSPI tft;
 
 void showHelloWorld() {
   tft.fillScreen(TFT_BLACK);     // Clear screen
-  tft.setTextColor(TFT_RED, TFT_BLACK);
   //tft.setTextSize(2);
   //tft.setFreeFont(&FreeSans12pt7b);
   //tft.setFreeFont(&FreeSans9pt7b.h);
   
-  tft.setCursor(40, 120);        // Center-ish position
-  tft.print("Hello World");
+  tft.setTextColor(TFT_RED, TFT_BLACK);
+  tft.setCursor(40, 20);        // Center-ish position
+  tft.print("RED TEXT");
+  tft.setTextColor(TFT_BLUE, TFT_BLACK);
+  tft.setCursor(40, 40);        // Center-ish position
+  tft.print("BLUE TEXT");
+
+  tft.setTextColor(TFT_GREEN, TFT_BLACK);
+  tft.setCursor(40, 60);        // Center-ish position
+  tft.print("GREEN TEXT");
+
+
+  tft.pushImage(50, 150, rgb_width, rgb_height, rgb_img);
+  tft.pushImage(150, 150, banana_width, banana_height, banana_img);
+
+  sleep(100);
+
+
+
   delay(4000);
 }
 

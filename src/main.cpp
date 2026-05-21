@@ -6,6 +6,7 @@
 #include "wifi_credentials.h"
 #include "mqtt_config.h"
 #include "graphics.h"
+#include "generated/banana.h"
 
 TFT_eSPI tft = TFT_eSPI();
 WiFiClient espClient;
@@ -76,8 +77,11 @@ void setup() {
 
   tft.init();
   tft.setRotation(1);
+  tft.setSwapBytes(true);
+  // tft.setSwapBytes(false);
   tft.fillScreen(TFT_BLACK);
 
+  
   // Draw graph frame
   // tft.drawRect(GRAPH_X, GRAPH_Y, GRAPH_W, GRAPH_H, TFT_WHITE);
   // tft.setTextColor(TFT_YELLOW, TFT_BLACK);
